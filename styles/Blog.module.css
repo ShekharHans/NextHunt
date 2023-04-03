@@ -1,0 +1,49 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6rem;
+    min-height: 17vh;
+    font-size: 22px;
+}
+
+.blogs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.blogItem {
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 20px;
+}
+
+.blogItem h3 {
+    font-size: 22px;
+    cursor: pointer;
+    padding-bottom: 10px;
+}
+
+.blogItem p {
+    font-size: 20px;
+    color: #c2bfbf;
+    max-width: 50vw;
+}
+
+.popularHeader {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    font-size: 25px;
+}
+
+
+@media (hover: hover) and (pointer: fine) {
+    .blogItem:hover {
+        background: rgba(var(--card-rgb), 0.1);
+        border: 1px solid rgba(var(--card-border-rgb), 0.15);
+    }
+}

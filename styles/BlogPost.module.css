@@ -1,0 +1,16 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6rem;
+    min-height: 17vh;
+    padding: 2rem;
+    font-size: 20px;
+}
+.container{
+    padding: 0 15rem;
+}
+.blogText{
+    margin-top: 30px;
+}

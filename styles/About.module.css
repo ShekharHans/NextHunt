@@ -1,0 +1,112 @@
+.aboutHeader {
+    display: flex;
+    justify-content: center;
+    font-size: 38px;
+    margin-top: 20px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    padding-top: 2rem;
+}
+
+.leftContainer {
+    display: flex;
+    /* width: 50%; */
+    justify-content: center;
+    margin-right: 40px;
+}
+
+.leftContainer img {
+    max-width: 320px;
+    border: 20px solid #7f7a7a;
+    /* box-shadow: 0px 0px 6px 0px; */
+}
+
+.rightContainer {
+    width: 30%;
+    /* margin-left: -70px; */
+}
+
+.name {
+    margin-top: 7rem;
+    text-align: center;
+    font-size: 32px;
+}
+
+.heading {
+    text-align: center;
+    font-family: monospace;
+    font-size: 15px;
+}
+
+.text {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+}
+
+.cv {
+    padding: 10px 20px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.portfolio {
+    cursor: pointer;
+}
+
+.cv,
+.portfolio {
+    align-items: center;
+    appearance: none;
+    background-color: #049890df;
+    border: 0;
+    border-radius: 6px;
+    box-shadow: #2d234266 0 2px 4px, #2d23424d 0 7px 13px -3px, #3a416f80 0 -3px 0 inset;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: "JetBrains Mono", monospace;
+    height: 48px;
+    justify-content: center;
+    line-height: 1;
+    list-style: none;
+    overflow: hidden;
+    padding: 10px 20px;
+    position: relative;
+    text-align: left;
+    text-decoration: none;
+    transition: box-shadow .15s, transform .15s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    will-change: box-shadow, transform;
+    font-size: 18px;
+}
+
+.cv:focus,
+.portfolio:focus {
+    box-shadow: #04c3b9df 0 0 0 1.5px inset, #2d234266 0 2px 4px, #2d23424d 0 7px 13px -3px, #04c3b9df 0 -3px 0 inset;
+}
+
+.cv:hover,
+.portfolio:hover {
+    box-shadow: #2d234266 0 4px 8px, #2d23424d 0 7px 13px -3px, #04c3b9df 0 -3px 0 inset;
+    transform: translateY(-2px);
+}
+
+.cv:active,
+.portfolio:active {
+    box-shadow: #04c3b9df 0 3px 7px inset;
+    transform: translateY(2px);
+}

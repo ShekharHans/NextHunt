@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+
+
+.body{
+    display: flex;
+    justify-content: center;
+}
+.contactContainer {
+    display: flex;
+    flex-direction: row;
+    width: 30vw;
+    margin: 144px 48px;
+    border-radius: 4px;
+    background-color: #334155;
+}
+
+.contactForm {
+    position: relative;
+    flex-grow: 1;
+    padding: 0px 48px;
+    background-color: #232121fa;
+}
+
+.contactForm::before {
+    position: absolute;
+    content: "";
+    top: -96px;
+    left: 0;
+    width: 100%;
+    height: calc(100% + 192px);
+    background-color: #232121fa;
+    border-radius: 20px;
+    z-index: -100;
+}
+
+.contactForm .heading {
+    margin-bottom: 48px;
+}
+
+.contactForm .heading h2 {
+    margin-bottom: 8px;
+    color: #fff;
+    font-size: 36px;
+}
+
+.contactForm .heading p {
+    color: #6e7073;
+    font-size: 16px;
+}
+
+.contactForm .input {
+    position: relative;
+    margin-bottom: 24px;
+    
+}
+
+.contactForm .input input,
+.contactForm .input textarea {
+    width: 100%;
+    padding: 8px 8px 8px 42px;
+    border-radius: 4px;
+    background-color: #c47be948;
+    font-size: 20px;
+    color: #d998f9;
+
+
+}
+
+.contactForm .input i {
+    position: absolute;
+    top: 10px;
+    left: 12px;
+    color: #4b5563;
+}
+
+
+.contactForm .button {
+    padding: 10px 20px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+
+
+.contactForm .button {
+    align-items: center;
+    appearance: none;
+    background-color: #049890df;
+    border: 0;
+    border-radius: 6px;
+    box-shadow: #2d234266 0 2px 4px, #2d23424d 0 7px 13px -3px, #3a416f80 0 -3px 0 inset;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: "JetBrains Mono", monospace;
+    height: 48px;
+    justify-content: center;
+    line-height: 1;
+    list-style: none;
+    overflow: hidden;
+    padding: 10px 20px;
+    position: relative;
+    text-align: left;
+    text-decoration: none;
+    transition: box-shadow .15s, transform .15s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    will-change: box-shadow, transform;
+    font-size: 18px;
+}
+
+
+.contactForm .button:focus {
+    box-shadow: #04c3b9df 0 0 0 1.5px inset, #2d234266 0 2px 4px, #2d23424d 0 7px 13px -3px, #04c3b9df 0 -3px 0 inset;
+}
+
+
+.contactForm .button:hover {
+    box-shadow: #2d234266 0 4px 8px, #2d23424d 0 7px 13px -3px, #04c3b9df 0 -3px 0 inset;
+    transform: translateY(-2px);
+}
+
+
+.contactForm .button:active {
+    box-shadow: #04c3b9df 0 3px 7px inset;
+    transform: translateY(2px);
+}
+
+@media screen and (max-width: 1024px) {
+    .contactContainer {
+        flex-direction: column;
+        margin: 0;
+    }
+
+    .contactForm {
+        padding: 96px 48px;
+    }
+}
