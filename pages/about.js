@@ -1,12 +1,15 @@
 import React from 'react'
 import styles from '@/styles/About.module.css'
+import Fade from 'react-reveal/Fade';
 
 const About = () => {
     return (
         <main>
+            <Fade left>
             <h1 className={styles.aboutHeader}>
                 About Me
             </h1>
+            </Fade>
             <div className={styles.container}>
                 {/* left-container*/}
                 <div className={styles.leftContainer}>

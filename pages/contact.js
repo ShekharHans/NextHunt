@@ -1,6 +1,7 @@
 import React from 'react'
 import styles from '@/styles/Contact.module.css'
 
+
 const Contact = () => {
   return (
     <>
@@ -9,7 +10,7 @@ const Contact = () => {
           <form className={styles.contactForm}>
             <div className={styles.heading}>
               <h2>CONTACT US</h2>
-              <p>feel free to reach out to us, we'd love to hear from you!</p>
+              <p>feel free to reach out to us, we&apos;d love to hear from you!</p>
             </div>
             <div className={styles.input}>
 
