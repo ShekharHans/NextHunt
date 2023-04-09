@@ -1,9 +1,19 @@
+import React from 'react'
 import Head from 'next/head'
 import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
 const inter = Inter({ subsets: ['latin'] })
+import Link from 'next/link'
+import { parse } from 'path'
+import { useState } from 'react'
+import Fade from 'react-reveal/Fade';
 
-export default function Home() {
+// import { getServerSideProps } from './blogpost/[slug]'
+import * as fs from 'fs';
+
+const Home = (props) => {
+  const [blogs, setBlogs] = useState(props.allBlogs)
+
   return (
     <>
       <style jsx>
@@ -32,11 +42,17 @@ export default function Home() {
         </div>
         {/* blogs */}
         <div className={styles.blogs}>
-          <h2 className="popularHeader">Populer Blogs</h2>
-          <div className={styles.blogItem}>
-            <h3>How to learn JavaScript in 2023 ?</h3>
-            <p>JavaScript is a scripting language that allows you to implement complex features on web pages</p>
-          </div>
+          <h1>Popular Blogs</h1>
+          <Fade bottom>
+          {blogs.map((blogItem) => {
+            return <div key={blogItem.title} className={styles.blogItem}>
+              <Link href={`/blogpost/${blogItem.slug}`}>
+                <h3>{blogItem.title}</h3>
+              </Link>
+              <p>{blogItem.metadesc.substr(0, 140)}....Read More</p>
+            </div>
+          })}
+          </Fade>
           <div className={styles.blogItem}>
             <h3>How to learn JavaScript in 2023 ?</h3>
             <p>JavaScript is a scripting language that allows you to implement complex features on web pages</p>
@@ -52,7 +68,21 @@ export default function Home() {
     </>
   )
 }
+export async function getStaticProps(context) {
+  let data = await fs.promises.readdir("blogdata");
+  let myfile;
+  let allBlogs = [];
+  for (let index = 0; index < data.length; index++) {
+    const item = data[index];
+    myfile = await fs.promises.readFile(('blogdata/' + item), 'utf-8')
+    allBlogs.push(JSON.parse(myfile))
+  }
 
+  return {
+    props: { allBlogs }, // will be passed to the page component as props
+  }
+}
+export default Home
 
 
 // git push -u origin main

@@ -41,6 +41,7 @@
 }
 
 
+
 @media (hover: hover) and (pointer: fine) {
     .blogItem:hover {
         background: rgba(var(--card-rgb), 0.1);

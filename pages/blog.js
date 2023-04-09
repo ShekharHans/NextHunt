@@ -3,7 +3,7 @@ import styles from '@/styles/Blog.module.css'
 import Link from 'next/link'
 import { parse } from 'path'
 import { useState } from 'react'
-import { getServerSideProps } from './blogpost/[slug]'
+// import { getServerSideProps } from './blogpost/[slug]'
 import * as fs from 'fs';
 import Fade from 'react-reveal/Fade';
 
@@ -13,7 +13,8 @@ import Fade from 'react-reveal/Fade';
 const Blog = (props) => {
   const [blogs, setBlogs] = useState(props.allBlogs)
 
-  console.log(props);
+  
+  // console.log(props);
 
   //because we use getserversideprops()
   // useEffect(() => {
@@ -52,7 +53,6 @@ export async function getStaticProps(context) {
   let allBlogs = [];
   for (let index = 0; index < data.length; index++) {
     const item = data[index];
-    console.log(item);
     myfile = await fs.promises.readFile(('blogdata/' + item), 'utf-8')
     allBlogs.push(JSON.parse(myfile))
   }

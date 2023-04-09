@@ -11,19 +11,19 @@ const Slug = (props) => {
       }
     const [blog, setBlog] = useState(props.myBlog)
 
-    // const router = useRouter();
-    // useEffect(() => {
-    //     if (! router.isReady) {
-    //         return;
-    //     }
-    //     const { slug } = router.query;
-    //     fetch(`http://localhost:3000/api/getblog?slug=${slug}`).then((a) => {
-    //         return a.json();
-    //     })
-    //         .then((parse) => {
-    //             setBlog(parse)
-    //         })
-    // }, [router.isReady])
+    const router = useRouter();
+    useEffect(() => {
+        if (! router.isReady) {
+            return;
+        }
+        const { slug } = router.query;
+        fetch(`http://localhost:3000/api/getblog?slug=${slug}`).then((a) => {
+            return a.json();
+        })
+            .then((parse) => {
+                setBlog(parse)
+            })
+    }, [router.isReady])
     return (
         <div className={styles.container}>
             <main className={styles.main}>
