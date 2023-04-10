@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from '@/styles/Hero.module.css'
 import Typical from 'react-typical'
-import Image from 'next/image'
+// import Image from 'next/image'
 import Link from 'next/link'
 import heroImg from "../public/hero.png"
 const Hero = () => {
@@ -21,7 +21,7 @@ const Hero = () => {
                 <div className={styles.button} >
                     <Link href='/blog'>
                         <button className={styles.btn}>
-                            Let's Go!
+                            Let&apos;s Go!
                         </button>
                     </Link>
                     <Link href='/contact'>
@@ -33,12 +33,12 @@ const Hero = () => {
 
             </div>
             <div className={styles.rightSection}>
-                <Image
+                <img
                     src={heroImg}
                     className={styles.heroImg}
                     alt='BackImg'
                     priority>
-                </Image>
+                </img>
             </div>
         </div>
     )

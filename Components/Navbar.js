@@ -11,14 +11,7 @@ const Navbar = () => {
                 rel="noopener noreferrer"
             >
                 {/* *As we use static server we cannot use next image* */}
-                {/* <Image
-                    src="/logo.svg"
-                    alt="Logo"
-                    className={styles.Logo}
-                    width={50}
-                    height={30}
-                    priority
-                /> */}
+                
                 <img
                     src="/logo.svg"
                     alt="Logo"
