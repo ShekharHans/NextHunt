@@ -7,6 +7,7 @@
   min-height: 17vh;
   padding: 2rem;
   font-size: 22px;
+  background-color: #050816;
 }
 
 
@@ -34,16 +35,21 @@
   flex-direction: column;
   justify-content: center;
 }
+
 .blogItem {
   justify-content: center;
   align-items: center;
   position: relative;
   padding: 20px;
 }
-.blogItem h3{
+
+.blogItem h3 {
   font-size: 22px;
+  cursor: pointer;
+  color: #5206ea;
 }
-.blogItem p{
+
+.blogItem p {
   font-size: 20px;
   color: #c2bfbf;
 }
@@ -53,7 +59,7 @@
   .blogItem:hover {
     background: rgba(var(--card-rgb), 0.1);
     border: 1px solid rgba(var(--card-border-rgb), 0.15);
-    cursor: pointer;
+    
   }
 }
 
@@ -127,6 +133,8 @@
     backdrop-filter: blur(24px);
   }
 
+
+
   .description div {
     pointer-events: none;
     inset: auto 0 0;
@@ -154,4 +162,18 @@
   to {
     transform: rotate(0deg);
   }
+}
+
+.popularHeader {
+  font-size: 33px;
+  text-align: center;
+  margin: 20px 0;
+  color: yellow;
+}
+.footer{
+  background: #0a102b;
+  color: #5206ea;
+  display: flex;
+  justify-content: center;
+  height: 1.5rem;
 }

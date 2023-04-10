@@ -1,5 +1,6 @@
 import React from 'react'
 import Head from 'next/head'
+import Footer from './footer'
 import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
 const inter = Inter({ subsets: ['latin'] })
@@ -7,10 +8,9 @@ import Link from 'next/link'
 import { parse } from 'path'
 import { useState } from 'react'
 import Fade from 'react-reveal/Fade';
-
+import Hero from './hero'
 // import { getServerSideProps } from './blogpost/[slug]'
 import * as fs from 'fs';
-
 const Home = (props) => {
   const [blogs, setBlogs] = useState(props.allBlogs)
 
@@ -32,39 +32,24 @@ const Home = (props) => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <Hero />
       <main className={styles.main}>
-        {/* header  */}
-        <div>
-          <h1 className={styles.headerText}>Next Hunt</h1>
-          <p className={styles.description}>
-            A blog written by Next Hunter for other blog hunters
-          </p>
-        </div>
-        {/* blogs */}
+        {/* blogs  */}
         <div className={styles.blogs}>
-          <h1>Popular Blogs</h1>
+          <h1 className={styles.popularHeader}>Popular Blogs</h1>
           <Fade bottom>
-          {blogs.map((blogItem) => {
-            return <div key={blogItem.title} className={styles.blogItem}>
-              <Link href={`/blogpost/${blogItem.slug}`}>
-                <h3>{blogItem.title}</h3>
-              </Link>
-              <p>{blogItem.metadesc.substr(0, 140)}....Read More</p>
-            </div>
-          })}
+            {blogs.map((blogItem) => {
+              return <div key={blogItem.title} className={styles.blogItem}>
+                <Link href={`/blogpost/${blogItem.slug}`}>
+                  <h3>{blogItem.title}</h3>
+                </Link>
+                <p>{blogItem.metadesc.substr(0, 140)}....Read More</p>
+              </div>
+            })}
           </Fade>
-          <div className={styles.blogItem}>
-            <h3>How to learn JavaScript in 2023 ?</h3>
-            <p>JavaScript is a scripting language that allows you to implement complex features on web pages</p>
-          </div>
-          <div className={styles.blogItem}>
-            <h3>How to learn JavaScript in 2023 ?</h3>
-            <p>JavaScript is a scripting language that allows you to implement complex features on web pages</p>
-          </div>
         </div>
-
-
       </main>
+      <Footer/>
     </>
   )
 }

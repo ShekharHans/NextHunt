@@ -7,13 +7,13 @@ import * as fs from 'fs';
 //step 2 : Populate them inside the page
 const Slug = (props) => {
     function createMarkup(c) {
-        return {__html: c};
-      }
+        return { __html: c };
+    }
     const [blog, setBlog] = useState(props.myBlog)
 
     const router = useRouter();
     useEffect(() => {
-        if (! router.isReady) {
+        if (!router.isReady) {
             return;
         }
         const { slug } = router.query;

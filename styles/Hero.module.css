@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Marhey&display=swap');
+
+.main {
+    width: 100%;
+    height: 100vh;
+    ;
+    background: url(../public/herobg.png);
+    opacity: 0.8;
+    position: relative;
+    display: flex;
+}
+
+.leftSection {
+    display: grid;
+    place-content: center;
+    place-items: center;
+    width: 50%;
+}
+
+.leftSection h1 {
+    font-family: 'Marhey', cursive;
+    text-align: center;
+    font-size: 60px;
+}
+
+.leftSection h1 span {
+    color: #5206ea;
+}
+
+.heroImg {
+    width: 43rem;
+    height: 43rem;
+    position: absolute;
+    top: 9%;
+}
+
+.typingBox {
+    text-align: left;
+    left: 15%;
+    position: absolute;
+    top: 55%;
+    font-size: 25px;
+    color: #ffff00;
+}
+
+.button {
+    display: flex;
+}
+
+.btn {
+    position: absolute;
+    margin-top: 35px;
+    padding: 10px 20px;
+    background: transparent;
+    border: 2px solid #808080;
+    cursor: pointer;
+    left: 15%;
+}
+
+.btn1 {
+    position: absolute;
+    margin-top: 35px;
+    padding: 10px 20px;
+    background: transparent;
+    border: 2px solid #808080;
+    cursor: pointer;
+    left: 23%;
+}
+
+.btn:hover,
+.btn1:hover {
+    background: #5206ea;
+}

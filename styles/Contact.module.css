@@ -11,14 +11,13 @@
     width: 30vw;
     margin: 144px 48px;
     border-radius: 4px;
-    background-color: #334155;
 }
 
 .contactForm {
     position: relative;
     flex-grow: 1;
     padding: 0px 48px;
-    background-color: #232121fa;
+    background-color: transparent;
 }
 
 .contactForm::before {
@@ -28,7 +27,7 @@
     left: 0;
     width: 100%;
     height: calc(100% + 192px);
-    background-color: #232121fa;
+    background-color: transparent;
     border-radius: 20px;
     z-index: -100;
 }

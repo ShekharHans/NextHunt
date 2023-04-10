@@ -29,16 +29,16 @@ const Navbar = () => {
                 />
             </Link>
             <ul className={styles.navItem}>
-                <Link href='/'>
+                <Link href='/' className={styles.navList}>
                     <li>Home</li>
                 </Link>
-                <Link href='/about'>
+                <Link href='/about' className={styles.navList}>
                     <li>About</li>
                 </Link>
-                <Link href='/blog'>
+                <Link href='/blog' className={styles.navList}>
                     <li>Blog</li>
                 </Link>
-                <Link href='/contact'>
+                <Link href='/contact' className={styles.navList}>
                     <li>Contact</li>
                 </Link>
             </ul>

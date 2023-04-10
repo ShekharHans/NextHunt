@@ -1,14 +1,17 @@
 .aboutHeader {
+    top: 7%;
     display: flex;
-    justify-content: center;
+    text-align: center;
     font-size: 38px;
     margin-top: 20px;
+    position: absolute;
+    left: 43%;
 }
 
 .container {
     display: flex;
     justify-content: center;
-    padding-top: 2rem;
+    padding-top: 10rem;
 }
 
 .leftContainer {
