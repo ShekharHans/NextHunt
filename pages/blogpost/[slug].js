@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
 import styles from '../../styles/BlogPost.module.css'
-import * as fs from 'fs';
+// import * as fs from 'fs';
 
 //step 1 : Find the file corresponding to the slug
 //step 2 : Populate them inside the page
@@ -38,39 +38,39 @@ const Slug = (props) => {
 
 // *static server 
 
-export async function getStaticPaths() {
-    return {
-        paths: [
-            { params: { slug: 'how-to-learn-javascript' } },
-            { params: { slug: 'how-to-learn-nodejs' } },
-            { params: { slug: 'how-to-learn-reactjs' } }
-        ],
-        fallback: true, // can also be true or 'blocking'
-    }
-}
+// export async function getStaticPaths() {
+//     return {
+//         paths: [
+//             { params: { slug: 'how-to-learn-javascript' } },
+//             { params: { slug: 'how-to-learn-nodejs' } },
+//             { params: { slug: 'how-to-learn-reactjs' } }
+//         ],
+//         fallback: true, // can also be true or 'blocking'
+//     }
+// }
 
 
-export async function getStaticProps(context) {
+// export async function getStaticProps(context) {
 
-    const { slug } = context.params;
-    let myBlog = await fs.promises.readFile(`blogdata/${slug}.json`, 'utf-8')
+//     const { slug } = context.params;
+//     let myBlog = await fs.promises.readFile(`blogdata/${slug}.json`, 'utf-8')
 
-    return {
-        props: { myBlog: JSON.parse(myBlog) }, // will be passed to the page component as props
-    }
-}
+//     return {
+//         props: { myBlog: JSON.parse(myBlog) }, // will be passed to the page component as props
+//     }
+// }
 
 
 // *Get server side props
 
-// export async function getServerSideProps(context) {
+export async function getServerSideProps(context) {
 
-//     const { slug } = context.query;
-//     let data = await fetch(`http://localhost:3000/api/getblog?slug=${slug}`)
-//     let myBlog = await data.json()
+    const { slug } = context.query;
+    let data = await fetch(`http://localhost:3000/api/getblog?slug=${slug}`)
+    let myBlog = await data.json()
 
-//     return {
-//         props: { myBlog }, // will be passed to the page component as props
-//     }
-// }
+    return {
+        props: { myBlog }, // will be passed to the page component as props
+    }
+}
 export default Slug;

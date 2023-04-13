@@ -1,9 +1,9 @@
 import React from 'react'
 import styles from '@/styles/Hero.module.css'
 import Typical from 'react-typical'
-// import Image from 'next/image'
+import Image from 'next/image'
 import Link from 'next/link'
-import heroImg from "../public/hero.png"
+import heroImg from '../public/hero.png'
 const Hero = () => {
     return (
         <div className={styles.main}>
@@ -33,12 +33,12 @@ const Hero = () => {
 
             </div>
             <div className={styles.rightSection}>
-                <img
+                <Image
                     src={heroImg}
                     className={styles.heroImg}
                     alt='BackImg'
-                    priority>
-                </img>
+                >
+                </Image>
             </div>
         </div>
     )

@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { parse } from 'path'
 import { useState } from 'react'
 // import { getServerSideProps } from './blogpost/[slug]'
-import * as fs from 'fs';
+// import * as fs from 'fs';
 import Fade from 'react-reveal/Fade';
 
 
@@ -47,20 +47,20 @@ const Blog = (props) => {
 
 
 // *Static Server
-export async function getStaticProps(context) {
-  let data = await fs.promises.readdir("blogdata");
-  let myfile;
-  let allBlogs = [];
-  for (let index = 0; index < data.length; index++) {
-    const item = data[index];
-    myfile = await fs.promises.readFile(('blogdata/' + item), 'utf-8')
-    allBlogs.push(JSON.parse(myfile))
-  }
+// export async function getStaticProps(context) {
+//   let data = await fs.promises.readdir("blogdata");
+//   let myfile;
+//   let allBlogs = [];
+//   for (let index = 0; index < data.length; index++) {
+//     const item = data[index];
+//     myfile = await fs.promises.readFile(('blogdata/' + item), 'utf-8')
+//     allBlogs.push(JSON.parse(myfile))
+//   }
 
-  return {
-    props: { allBlogs }, // will be passed to the page component as props
-  }
-}
+//   return {
+//     props: { allBlogs }, // will be passed to the page component as props
+//   }
+// }
 
 
 
@@ -70,12 +70,12 @@ export async function getStaticProps(context) {
 
 
 // *getServerSideProps
-// export async function getServerSideProps(context) {
-//   let data = await fetch('http://localhost:3000/api/blogs')
-//   let allBlogs = await data.json()
+export async function getServerSideProps(context) {
+  let data = await fetch('http://localhost:3000/api/blogs')
+  let allBlogs = await data.json()
 
-//   return {
-//     props: { allBlogs }, // will be passed to the page component as props
-//   }
-// }
+  return {
+    props: { allBlogs }, // will be passed to the page component as props
+  }
+}
 export default Blog
