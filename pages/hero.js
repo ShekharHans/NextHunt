@@ -1,9 +1,8 @@
 import React from 'react'
 import styles from '@/styles/Hero.module.css'
 import Typical from 'react-typical'
-import Image from 'next/image'
 import Link from 'next/link'
-import heroImg from '../public/hero.png'
+
 const Hero = () => {
     return (
         <div className={styles.main}>
@@ -32,13 +31,16 @@ const Hero = () => {
                 </div>
 
             </div>
-            <div className={styles.rightSection}>
-                <Image
-                    src={heroImg}
-                    className={styles.heroImg}
-                    alt='BackImg'
-                >
-                </Image>
+            <div>
+                {/* <div className={styles.rightSection}>
+
+                    <div className="heroImg">
+                        <img
+                            src="../public/astronaut-hero.svg"
+                            className={styles.heroImg}
+                        />
+                    </div>
+                </div> */}
             </div>
         </div>
     )

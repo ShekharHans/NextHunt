@@ -1,7 +1,6 @@
 import React from 'react'
 import styles from '@/styles/About.module.css'
 import Fade from 'react-reveal/Fade';
-import Image from 'next/image';
 import rectangle from '../public/rectangle-68.svg'
 import frame from '../public/frame.jpg'
 import worldImg from '../public/world-img@2x.png'
@@ -32,12 +31,12 @@ const About = () => {
                     <div className={styles.aboutus}>
                         <div className={styles.content1} id="section-2">
                             <div className={styles.vectorParent} id="section-2-text">
-                                <Image className={styles.frameChild}alt="" src={rectangle} ></Image>
+                                <img className={styles.frameChild}alt="" src={rectangle} />
                                 <div className={styles.note}>
                                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi voluptatibus unde numquam ut dolores quidem provident illum veritatis, necessitatibus facilis, aperiam voluptatum sit! Assumenda perspiciatis asperiores molestiae nihil magni eos iure iste iusto nam quasi. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima minus eos repudiandae ipsam amet? Repellat beatae in error consequatur odio. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet, perspiciatis.
                                 </div>
                             </div>
-                            <Image className={styles.contentChild} alt="" src={frame} ></Image>
+                            <img className={styles.contentChild} alt="" src={frame} />
                         </div>
                     </div>
                     <div className={styles.headings} id="Section-3">
@@ -52,7 +51,7 @@ const About = () => {
                         </div>
                     </div>
                     <div className={styles.worldmap} id="section-4">
-                        <Image className={styles.containerIcon} alt="" src={worldImg} ></Image>
+                        <img className={styles.containerIcon} alt="" src={worldImg} />
                     </div>
                     <div className={styles.visionmission} id="section-5">
                         <div className={styles.headingParent}>

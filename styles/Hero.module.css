@@ -27,11 +27,14 @@
     color: #5206ea;
 }
 
-.heroImg {
-    width: 51rem;
-    height: 43rem;
+.leftSection .heroImg img {
+    width: 81rem;
+    height: 63rem;
     position: absolute;
-    top: 9%;
+    top: 7%;
+    right: -3%;
+    background: url("../public/astronaut-hero.svg");
+    
 }
 
 .typingBox {
